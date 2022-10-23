@@ -29,11 +29,11 @@ public class BookTest {
         Assertions.assertEquals(currentRating, book.getRating());
     }
 
-    @ParameterizedTest
-    @ValueSource(strings = "add")
-    void append_AddText (String moreText) {
-        String expectedText = book.text + moreText;
-        book.append(moreText);
+    @Test
+    void append_AddText () {
+        String addText = "add text";
+        String expectedText = book.text + addText;
+        book.append(addText);
         Assertions.assertEquals(expectedText, book.getText());
     }
 
